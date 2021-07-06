@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class MainClass {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = 0;
+        int number1 = 0;
+        int sum = 0;
+        double average = 0;
+        while (true){
+            System.out.println("Scrie un numar:");
+            int userInput = Integer.valueOf(scanner.nextLine());
+            number += 1;
+            if (userInput == 0 && number == 1){
+                System.out.println("Cannot calculate the average");
+                break;
+            }
+            if (userInput > 0){
+                number1 += 1;
+                sum += userInput;
+                average = (double) sum / number1;
+            }
+            if (userInput == 0) {
+                break;
+            }
+        }
+        if (average > 0.0){
+            System.out.println("Average is: " + average);
+        }
+    }
+}

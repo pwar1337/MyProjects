@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class MainClass {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.println("first number");
+        int userImput = Integer.valueOf(x.nextLine()); // 2
+        System.out.println("last number");
+        int userImput1 = Integer.valueOf(x.nextLine()); // 7
+        int result = 0;
+
+        for (int i = userImput; i <= userImput1; i++){
+            result += i;
+        }
+        System.out.println("the sum is " + result);
+    }
+}

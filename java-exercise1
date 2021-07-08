@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class MainClass {
+    public static void main(String[] args) {
+       Scanner x = new Scanner(System.in);
+       int sum = 0;
+       int non = 0;
+       int even = 0;
+       int odd = 0;
+       double average = 0;
+        System.out.println("Write number:");
+        while (true){
+            int input = Integer.valueOf(x.nextLine());
+            if (input == -1){
+                System.out.println("Thanks! Bye!");
+                break;
+            }
+            else{
+                sum += input;
+                non = non + 1;
+                average = (double) sum / non;
+                even = input / 2;
+                odd = input / 3;
+            }
+        }
+        System.out.println("Sum is: " + sum);
+        System.out.println("Numers: "+ non);
+        System.out.println("Average of numbers is: " + average);
+        System.out.println("Even: " + even);
+        System.out.println("Odd: " + odd);
+    }
+}
